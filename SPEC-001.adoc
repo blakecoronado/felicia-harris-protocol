@@ -166,3 +166,45 @@ This network empowers disabled people and survivors to file ADA, FEHA, and housi
 - Documate, Gavel.io, or Jotform Logic (for auto-filling forms)
 - GitHub Issues or Airtable (for tracking case status)
 - Shared Google Drive or Clio for document sharing and retention
+
+=== Caregiver Solidarity & Mental Health Division
+
+[plantuml,caregiver_support_arch,svg]
+----
+@startuml
+package "Caregiver Services Hub" {
+  [Crisis Support Request Form] --> [Caregiver Intake DB]
+  [Caregiver Intake DB] --> [Peer Counseling Queue]
+  [Caregiver Intake DB] --> [Mutual Aid Match Engine]
+  [Mutual Aid Match Engine] --> [Respite Support Fund]
+}
+@enduml
+----
+
+This division supports unpaid or underpaid caregivers through emotional relief, legal education, and direct material assistance—including stipends and paid respite care models.
+
+*Technical Components*
+- **Crisis Support Form**: For caregivers in mental health distress or burnout
+- **Caregiver Intake DB**: Tracks caregiving roles, eligibility, and care tasks
+- **Peer Counseling Queue**: Assigns to trained volunteer caregivers
+- **Mutual Aid Match Engine**: Pairs caregivers with resources or backup help
+- **Respite Support Fund**: Grant-based or pooled funds for relief care
+
+*Data Schema Example*
+- `caregiver_id` (UUID)
+- `recipient_id` (optional)
+- `care_context` (disability type, age, conditions)
+- `support_type_requested` (counseling, respite, stipend)
+- `urgency_level` (1–5)
+- `match_status` (pending / matched / in-progress)
+
+*Human Roles*
+- **Peer counselor**: Caregiver trained in active listening & crisis de-escalation
+- **Respite coordinator**: Manages relief shifts or fund disbursements
+- **Legal educator**: Delivers sessions on caregiver rights & protections
+
+*Recommended Tools*
+- Airtable or Notion (for tracking caregiver profiles and requests)
+- Calendly or Chilipepper (for booking support calls)
+- OpenCollective or Fundraise.com (for managing caregiver stipends)
+- Loom or Zoom (for recorded training sessions)
