@@ -9,3 +9,29 @@ The Felicia Harris Protocol was developed in response to the catastrophic system
 This protocol is grounded in the lived experiences of survivors and advocates and formalizes a replicable model for community-driven crisis intervention, systemic accountability, and structural reform. It is named to honor Felicia and to ensure that no one facing similar barriers remains invisible or unprotected.
 
 Add Background section for Protocol
+== Requirements
+
+The Felicia Harris Protocol aims to institutionalize survivor-driven crisis response and system accountability. Key requirements are derived from real-world failures and the lived cases that shaped each division.
+
+=== Must Have
+- Real-time crisis response for disabled and vulnerable individuals
+- Documented government inaction cases (with escalation tools)
+- Legal aid for ADA/FEHA/Unruh complaints
+- Public reporting system for housing rights violations
+- Advocacy for caregivers without compensation
+- Survivor-centered storytelling tools for communication disabilities
+
+=== Should Have
+- Public databases of failing agencies and landlords
+- Interactive policy dashboard or map
+- Pre-filled legal templates for small claims and complaints
+- On-call media/legal advocacy liaisons
+
+=== Could Have
+- Annual recognitions for whistleblowers
+- Volunteer training modules for caregiver support and ADA education
+- Policy tracker linked to survivor-originated legislation
+
+=== Will Not Have (in MVP)
+- 24/7 hotline staffed by professionals (pending funding)
+- Automated ADA litigation filing bots (future release)
