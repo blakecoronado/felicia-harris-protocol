@@ -326,3 +326,33 @@ The Felicia Harris Protocol can be implemented as a modular system, with each di
 . Begin policy dashboard and brief automation using Airtable or Notion databases
 . Launch RSVP tools for civic roundtables and start tracking resolutions
 . Formalize public award nomination and storytelling archive
+
+== Milestones
+
+The following milestones guide the phased implementation and expansion of the Felicia Harris Protocol:
+
+=== Phase 1 – Infrastructure Setup (Month 1–2)
+- [ ] Protocol published on GitHub Pages or Notion
+- [ ] Crisis response intake form active
+- [ ] Airtable databases set up for:
+  * Case tracking
+  * Housing watchdog reports
+  * Legal aid requests
+  * Caregiver support
+- [ ] Twilio + Zapier integration for on-call alerts
+- [ ] Landlord map MVP deployed
+- [ ] First storytelling archive submission received
+
+=== Phase 2 – Volunteer Operations (Month 3–4)
+- [ ] 10+ trained volunteers onboarded
+- [ ] On-call rotation established
+- [ ] First legal filing generated from protocol system
+- [ ] First media kit sent to journalist or policymaker
+- [ ] Mutual aid fund activated for caregivers
+
+=== Phase 3 – Advocacy & Expansion (Month 5+)
+- [ ] 5+ policy briefs published
+- [ ] 3+ city/county resolutions initiated
+- [ ] Roundtable with elected officials held
+- [ ] Public award nominations opened
+- [ ] First survivor-led legislation co-authored
