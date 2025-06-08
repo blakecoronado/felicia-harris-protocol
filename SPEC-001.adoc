@@ -208,3 +208,45 @@ This division supports unpaid or underpaid caregivers through emotional relief, 
 - Calendly or Chilipepper (for booking support calls)
 - OpenCollective or Fundraise.com (for managing caregiver stipends)
 - Loom or Zoom (for recorded training sessions)
+
+=== Disability Visibility + Crisis Storytelling Archive
+
+[plantuml,storytelling_arch,svg]
+----
+@startuml
+package "Storytelling Platform" {
+  [Story Submission Tool] --> [Survivor Content Database]
+  [Survivor Content Database] --> [Media Toolkit Generator]
+  [Survivor Content Database] --> [Public Archive Gallery]
+  [Survivor Content Database] --> [Whistleblower Nomination Panel]
+}
+@enduml
+----
+
+This archive uplifts the voices of disabled people—especially those with speech, cognitive, or expressive challenges—and preserves crisis stories for legal, media, and educational use.
+
+*Technical Components*
+- **Story Submission Tool**: Accepts video, audio, assisted writing, or third-party uploads
+- **Survivor Content DB**: Stores all submitted content with metadata, consent levels, and accessibility tags
+- **Media Toolkit Generator**: Converts stories into packages for press, policy, or education
+- **Public Archive Gallery**: Curated portal where stories can be browsed (tagged by theme, region, or disability)
+- **Nomination Panel**: Backend interface for proposing annual recognitions or awards
+
+*Data Schema Example*
+- `story_id` (UUID)
+- `submitter_type` (self, caregiver, advocate)
+- `media_type` (audio, video, text, visual)
+- `consent_scope` (internal only, public, legal)
+- `topic_tags` (array)
+- `accessibility_needs` (captions, ASL, plain language)
+
+*Human Roles*
+- **Story facilitator**: Helps people with speech or cognitive disabilities tell their stories
+- **Content reviewer**: Verifies consent, clarity, and safety of shared media
+- **Archivist**: Tags and curates content for the public gallery
+
+*Recommended Tools*
+- Descript or Otter.ai (for transcription)
+- Canva or Adobe Express (for toolkit building)
+- Webflow or Cargo (for gallery-style visual archive)
+- Airtable or Firebase (for backend metadata tracking)
