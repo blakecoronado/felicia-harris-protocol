@@ -1,0 +1,11 @@
+= SPEC-001: The Felicia Harris Protocol
+:sectnums:
+:toc:
+
+== Background
+
+The Felicia Harris Protocol was developed in response to the catastrophic systemic neglect of Felicia Harris—a disabled, non-verbal, post-stroke, epileptic Black woman—who was repeatedly denied access to emergency services and housing support despite visible medical and legal needs. Her crisis, and the tireless advocacy that followed, revealed massive gaps in accountability, crisis intervention, housing justice, legal access, caregiver support, and policy responsiveness.
+
+This protocol is grounded in the lived experiences of survivors and advocates and formalizes a replicable model for community-driven crisis intervention, systemic accountability, and structural reform. It is named to honor Felicia and to ensure that no one facing similar barriers remains invisible or unprotected.
+
+Add Background section for Protocol
