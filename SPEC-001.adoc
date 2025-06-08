@@ -35,3 +35,49 @@ The Felicia Harris Protocol aims to institutionalize survivor-driven crisis resp
 === Will Not Have (in MVP)
 - 24/7 hotline staffed by professionals (pending funding)
 - Automated ADA litigation filing bots (future release)
+
+== Method
+
+=== Crisis Response Accountability Unit
+
+[plantuml,crisis_unit_architecture,svg]
+----
+@startuml
+package "Crisis Response System" {
+  [Public Hotline Form] --> [Case Triage API]
+  [Case Triage API] --> [Case Database]
+  [Case Triage API] --> [On-Call Advocate SMS Alert]
+  [Case Database] --> [Escalation Dashboard]
+  [Escalation Dashboard] --> [Media & Legal Notification]
+  [Escalation Dashboard] --> [Gov Agency Contact]
+}
+@enduml
+----
+
+This unit manages incoming crisis reports when systems like 988, 211, or APS fail to respond. It combines digital intake with human follow-up:
+
+*Technical Components*
+- **Hotline Form**: Accessible intake form (mobile-first) for reporting non-response.
+- **Case Triage API**: Receives form data and routes to either human advocates or automated alerts.
+- **Case Database**: Stores all case metadata including agency contacted, timestamp, location, urgency score.
+- **Escalation Dashboard**: Admin view to sort cases by urgency, trigger email/media/legal escalations.
+
+*Data Schema Example*
+- `case_id` (UUID)
+- `submitted_by` (email or anon)
+- `subject_name` (optional)
+- `agency_failed` (string)
+- `incident_time` (datetime)
+- `disability_flag` (boolean)
+- `urgency_score` (int, 1–5)
+- `advocate_assigned` (user ID)
+
+*Human Roles*
+- **On-call advocate**: Gets SMS/email when a high-urgency case is submitted.
+- **Escalation team**: Trained media/legal outreach staff.
+
+*Recommended Tools*
+- Airtable or Supabase (for case database)
+- Formspree or Tally.so (for form intake)
+- Twilio (for SMS to on-call advocate)
+- Zapier or n8n (to automate routing/escalation)
