@@ -250,3 +250,43 @@ This archive uplifts the voices of disabled people—especially those with speec
 - Canva or Adobe Express (for toolkit building)
 - Webflow or Cargo (for gallery-style visual archive)
 - Airtable or Firebase (for backend metadata tracking)
+
+=== Civic Reform & Policy Development Division
+
+[plantuml,policy_dev_arch,svg]
+----
+@startuml
+package "Policy Advocacy Stack" {
+  [Case Data Warehouse] --> [Policy Brief Generator]
+  [Policy Brief Generator] --> [Legislative Outreach Tool]
+  [Case Data Warehouse] --> [Resolution Proposal Tracker]
+  [Roundtable RSVP System] --> [Event Dashboard]
+}
+@enduml
+----
+
+This division turns crisis case data into public policy by generating briefs, tracking reform proposals, and convening survivor-informed roundtables with city and state leaders.
+
+*Technical Components*
+- **Case Data Warehouse**: Aggregates verified data from other protocol divisions
+- **Policy Brief Generator**: Auto-creates one-pagers and reports from templates
+- **Resolution Tracker**: Monitors local city/county actions tied to protocol cases
+- **Roundtable RSVP System**: Manages guestlists, submissions, and follow-up materials
+
+*Data Schema Example*
+- `brief_id` (UUID)
+- `source_cases` (array of case IDs)
+- `policy_focus` (e.g. ADA, eviction reform, crisis response)
+- `jurisdiction_level` (city / county / state)
+- `status` (draft / sent / accepted / implemented)
+
+*Human Roles*
+- **Policy writer**: Uses case summaries to draft briefs and model laws
+- **Community liaison**: Coordinates roundtables and survivor input
+- **Data analyst**: Identifies trends and aggregates crisis themes
+
+*Recommended Tools*
+- Google Docs or Canva Docs (for drafting briefs)
+- Airtable or Notion (for tracking resolutions and legislation)
+- Eventbrite, Luma, or Google Forms (for civic roundtable coordination)
+- Docusign or HelloSign (for survivor consent on public data use)
