@@ -81,3 +81,45 @@ This unit manages incoming crisis reports when systems like 988, 211, or APS fai
 - Formspree or Tally.so (for form intake)
 - Twilio (for SMS to on-call advocate)
 - Zapier or n8n (to automate routing/escalation)
+
+=== Harris Housing Watchdog Program
+
+[plantuml,housing_watchdog_arch,svg]
+----
+@startuml
+package "Housing Justice Stack" {
+  [Anonymous Report Form] --> [Tenant Rights Database]
+  [Tenant Rights Database] --> [Advocate Intake Queue]
+  [Advocate Intake Queue] --> [Legal Aid Trigger]
+  [Tenant Rights Database] --> [Predatory Landlord Map]
+}
+@enduml
+----
+
+This program collects habitability, eviction, and discrimination reports from tenants—especially those with disabilities—and uses them to trigger legal action, media exposure, or support teams.
+
+*Technical Components*
+- **Anonymous Reporting Tool**: Online/mobile form with optional photo/video upload
+- **Tenant Rights Database**: Logs reports of violations (e.g., infestations, failed repairs, retaliation)
+- **Advocate Intake Queue**: Assigns urgent cases to housing defenders or legal support
+- **Predatory Landlord Map**: Visual overlay of reported properties, linked to property managers
+
+*Data Schema Example*
+- `report_id` (UUID)
+- `property_address`
+- `reported_issue` (e.g., mold, ADA access denial)
+- `disability_context` (boolean/text)
+- `submission_type` (anonymous / named)
+- `legal_referral` (boolean)
+- `landlord_id` (foreign key)
+
+*Human Roles*
+- **Housing advocate**: Reviews incoming reports, verifies urgency
+- **Legal coordinator**: Connects verified reports to ADA housing attorneys
+- **Tech steward**: Maintains the public map and reporting platform
+
+*Recommended Tools*
+- Typeform or Jotform (for rich form input with uploads)
+- Supabase or Firebase (for the backend database)
+- Leaflet.js + Mapbox or ArcGIS (for the public-facing map)
+- Glide or Softr (for building a no-code portal)
