@@ -123,3 +123,46 @@ This program collects habitability, eviction, and discrimination reports from te
 - Supabase or Firebase (for the backend database)
 - Leaflet.js + Mapbox or ArcGIS (for the public-facing map)
 - Glide or Softr (for building a no-code portal)
+
+
+=== Survivor Justice & ADA Legal Advocacy Network
+
+[plantuml,legal_advocacy_arch,svg]
+----
+@startuml
+package "Legal Empowerment Workflow" {
+  [Legal Intake Form] --> [Case Builder Engine]
+  [Case Builder Engine] --> [Template Generator]
+  [Template Generator] --> [Filing Support Queue]
+  [Filing Support Queue] --> [Volunteer Legal Team]
+  [Case Builder Engine] --> [Public Lawsuit Tracker]
+}
+@enduml
+----
+
+This network empowers disabled people and survivors to file ADA, FEHA, and housing complaints even without formal legal representation. It includes document tools, training, and optionally public interest legal escalation.
+
+*Technical Components*
+- **Legal Intake Form**: Collects complaint details (accessible and mobile-friendly)
+- **Case Builder Engine**: Suggests claim types and matches template letters/forms
+- **Template Generator**: Auto-fills legal documents or demand letters
+- **Volunteer Legal Queue**: Assigns verified claims to trained paralegals/lawyers
+- **Lawsuit Tracker**: Optionally shows public interest or class-action efforts
+
+*Data Schema Example*
+- `legal_case_id` (UUID)
+- `user_type` (self, advocate, legal guardian)
+- `violation_type` (ADA / FEHA / Unruh / Housing)
+- `respondent` (agency or landlord name)
+- `template_used` (reference ID)
+- `status` (draft / filed / assigned / closed)
+
+*Human Roles*
+- **Legal navigator**: Assists users with document generation
+- **Volunteer attorney/paralegal**: Validates case and may file
+- **Outreach team**: Educates community and tracks frequent offenders
+
+*Recommended Tools*
+- Documate, Gavel.io, or Jotform Logic (for auto-filling forms)
+- GitHub Issues or Airtable (for tracking case status)
+- Shared Google Drive or Clio for document sharing and retention
