@@ -290,3 +290,39 @@ This division turns crisis case data into public policy by generating briefs, tr
 - Airtable or Notion (for tracking resolutions and legislation)
 - Eventbrite, Luma, or Google Forms (for civic roundtable coordination)
 - Docusign or HelloSign (for survivor consent on public data use)
+
+== Implementation
+
+The Felicia Harris Protocol can be implemented as a modular system, with each division launched separately but integrated over time. The MVP focuses on **community-first**, low-cost, and no-code/low-code approaches to make it scalable and accessible to grassroots teams.
+
+=== Phase 1 – MVP Launch
+. Set up GitHub Pages or Notion for public-facing protocol documentation
+. Launch crisis reporting form (using Tally.so or Formspree)
+. Use Airtable for:
+  - Crisis case database
+  - Housing watchdog report intake
+  - Legal filing tracker
+  - Caregiver support log
+. Use Zapier or Make.com to:
+  - Trigger SMS to on-call advocate (Twilio)
+  - Route legal filings to volunteers
+. Create public-facing map (Landlord Watchlist) using Mapbox or ArcGIS
+. Use Google Docs + Canva for:
+  - Policy briefs
+  - Survivor storytelling media kits
+. Enable submission consent via Google Forms + DocuSign (if needed)
+
+=== Phase 2 – Volunteer Network Activation
+. Train 10–15 on-call volunteers:
+  - Crisis advocates
+  - Housing defenders
+  - Legal aid assistants
+  - Storytelling facilitators
+. Build internal Notion or Airtable CRM to manage assignments and progress
+. Publish media and outreach kits to amplify first cases
+
+=== Phase 3 – Data Aggregation and Policy Engine
+. Aggregate structured case data across divisions
+. Begin policy dashboard and brief automation using Airtable or Notion databases
+. Launch RSVP tools for civic roundtables and start tracking resolutions
+. Formalize public award nomination and storytelling archive
